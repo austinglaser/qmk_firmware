@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[LAYER_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
 
                                                               KC_TRNS, KC_TRNS,
                                                                        KC_TRNS,
-                                                   KC_LALT, KC_BSPACE, KC_TRNS,
+                                              GUI_T(KC_NO), KC_BSPACE, KC_TRNS,
 
       KC_6,        KC_7, KC_8,    KC_9,     KC_0,    KC_MINUS,  KC_EQUAL,
       KC_LBRACKET, KC_Y, KC_U,    KC_I,     KC_O,    KC_P,      KC_BSLASH,
