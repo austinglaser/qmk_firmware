@@ -12,7 +12,7 @@ enum custom_keycodes {
 
 enum layers {
   BASE = 0,
-  ARROWS,
+  FUNCTION,
   LAYER_COUNT
 };
 
@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[LAYER_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TAB,           KC_Q,    KC_W,     KC_E,    KC_R,       KC_T,  KC_TRNS,
       CTL_T(KC_ESCAPE), KC_A,    KC_S,     KC_D,    KC_F,       KC_G,
       KC_LSHIFT,        KC_Z,    KC_X,     KC_C,    KC_V,       KC_B,  KC_TRNS,
-      KC_TRNS,          KC_TRNS, KC_TRNS,  KC_TRNS, MO(ARROWS),
+      KC_TRNS,          KC_TRNS, KC_TRNS,  KC_TRNS, MO(FUNCTION),
 
                                                               KC_TRNS, KC_TRNS,
                                                                        KC_TRNS,
@@ -40,8 +40,8 @@ const uint16_t PROGMEM keymaps[LAYER_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TRNS, KC_ENTER, KC_SPACE
   ),
 
-  [ARROWS] = LAYOUT_ergodox(
-      KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS,
+  [FUNCTION] = LAYOUT_ergodox(
+      KC_TRNS, KC_F1,   KC_F2,    KC_F3,   KC_F4,   KC_F5,    KC_TRNS,
       KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS,
       KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS,
       KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS,
@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[LAYER_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
                                                               KC_TRNS,
                                             KC_TRNS, KC_TRNS, KC_TRNS,
 
-      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
+      KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11,  KC_F12,
       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
                KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, KC_TRNS, KC_TRNS,
       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS,
