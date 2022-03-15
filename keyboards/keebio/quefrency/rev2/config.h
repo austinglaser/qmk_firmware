@@ -24,7 +24,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEVICE_VER      0x0200
 #define MANUFACTURER    Keebio
 #define PRODUCT         Quefrency Rev. 2
-#define DESCRIPTION     Split 60/65 percent staggered keyboard
 
 /* key matrix size */
 // Rows are doubled-up
@@ -47,14 +46,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEBOUNCE 5
 
 #define BACKLIGHT_PIN B5
+#define CAPS_LOCK_LED_PIN B6
 
 /* serial.c configuration for split keyboard */
 #define SOFT_SERIAL_PIN D0
-
-/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-#define LOCKING_SUPPORT_ENABLE
-/* Locking resynchronize hack */
-#define LOCKING_RESYNC_ENABLE
 
 /* ws2812 RGB LED */
 #define RGB_DI_PIN E6
@@ -62,3 +57,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLED_NUM 16    // Number of LEDs
 #define RGBLED_SPLIT { 8, 8 }
 #define RGBLIGHT_LED_MAP { 1, 2, 3, 12, 13, 14, 15, 0, 7, 6, 5, 4, 11, 10, 9, 8 }
+
+// Set 65% column (option 3) and Macro (option 4) on by default
+#define VIA_EEPROM_LAYOUT_OPTIONS_DEFAULT 0x00DE
+#define VIA_EEPROM_LAYOUT_OPTIONS_SIZE 2
