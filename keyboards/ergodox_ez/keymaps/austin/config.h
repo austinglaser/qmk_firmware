@@ -11,5 +11,10 @@
 // See docs for more details
 #define PERMISSIVE_HOLD
 
+// On the other hand, CTRL/ESC will not ever be escape when held longer than
+// the TAPPING_TERM. Defining RETRO_TAPPING means that if tapped alone for
+// _any_ length of time, it will send an esc.
+#define RETRO_TAPPING
+
 #undef TAPPING_TERM
 #define TAPPING_TERM 135
