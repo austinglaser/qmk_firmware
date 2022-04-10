@@ -9,7 +9,7 @@
 // modifier key is held down for a very short period of time).
 //
 // See docs for more details
-#define PERMISSIVE_HOLD
+#define HOLD_ON_OTHER_KEY_PRESS
 
 // On the other hand, CTRL/ESC will not ever be escape when held longer than
 // the TAPPING_TERM. Defining RETRO_TAPPING means that if tapped alone for
@@ -17,4 +17,4 @@
 #define RETRO_TAPPING
 
 #undef TAPPING_TERM
-#define TAPPING_TERM 135
+#define TAPPING_TERM 200
