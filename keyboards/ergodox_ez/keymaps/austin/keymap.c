@@ -1,5 +1,6 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
+#include "keymap_steno.h"
 
 enum custom_keycodes {
   PLACEHOLDER = SAFE_RANGE, // can always be here
@@ -11,6 +12,7 @@ enum layers {
   BASE_FUNCTION,
   GAMING,
   GAMING_FUNCTION,
+  STENO,
   LAYER_COUNT
 };
 
@@ -63,7 +65,7 @@ const uint16_t PROGMEM keymaps[LAYER_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE_FUNCTION] = LAYOUT_FUNCTION,
 
   [GAMING] = LAYOUT_ergodox(
-      KC_GRAVE,         KC_1,    KC_2,     KC_3,    KC_4,       KC_5,  TO(BASE),
+      KC_GRAVE,         KC_1,    KC_2,     KC_3,    KC_4,       KC_5,  TO(STENO),
       KC_TAB,           KC_Q,    KC_W,     KC_E,    KC_R,       KC_T,  _______,
       CTL_T(KC_ESCAPE), KC_A,    KC_S,     KC_D,    KC_F,       KC_G,
       KC_LEFT_SHIFT,    KC_Z,    KC_X,     KC_C,    KC_V,       KC_B,  _______,
@@ -85,6 +87,26 @@ const uint16_t PROGMEM keymaps[LAYER_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [GAMING_FUNCTION] = LAYOUT_FUNCTION,
+
+  [STENO] = LAYOUT_ergodox(
+       KC_BSPC, _______, _______, _______, _______, _______, TO(BASE),
+       _______, STN_N1,  STN_N2,  STN_N3,  STN_N4,  STN_N5,  _______,
+       _______, STN_S1,  STN_TL,  STN_PL,  STN_HL,  STN_ST1,
+       _______, STN_S2,  STN_KL,  STN_WL,  STN_RL,  STN_ST2, _______,
+       _______, _______, _______, _______, _______,
+                                           STN_NC,  _______,
+                                                    _______,
+                                  STN_A,   STN_O,   _______,
+
+       _______, _______, _______, _______, _______, _______, _______,
+       _______, STN_N6,  STN_N7,  STN_N8,  STN_N9,  STN_NA,  STN_NB,
+                STN_ST3, STN_FR,  STN_PR,  STN_LR,  STN_TR,  STN_DR,
+       _______, STN_ST4, STN_RR,  STN_BR,  STN_GR,  STN_SR,  STN_ZR,
+                         _______, _______, _______, _______, _______,
+       _______, STN_NC,
+       _______,
+       _______, STN_E,   STN_U
+  ),
 };
 
 const uint16_t PROGMEM fn_actions[] = {
