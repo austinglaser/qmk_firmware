@@ -13,10 +13,5 @@
 // modifier key is held down for a very short period of time).
 #define HOLD_ON_OTHER_KEY_PRESS
 
-// On the other hand, CTRL/ESC will not ever be escape when held longer than
-// the TAPPING_TERM. Defining RETRO_TAPPING means that if tapped alone for
-// _any_ length of time, it will send an esc.
-#define RETRO_TAPPING
-
 #undef TAPPING_TERM
 #define TAPPING_TERM 200
