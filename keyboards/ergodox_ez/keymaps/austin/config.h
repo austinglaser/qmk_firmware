@@ -1,3 +1,7 @@
+// --- Dual-function key configuration
+//
+// Reference docs/tap_hold.md
+
 // Without this, dual function keys (tapped/held) like Esc/Ctrl don't act as
 // modifiers when tapped very quickly. This is good for use-cases like
 // "Z"/Ctrl, where you might get tripped up by quick rolling combos -- but for
@@ -7,8 +11,6 @@
 
 // Makes quick rolling combos even better (for cases when a dual-function
 // modifier key is held down for a very short period of time).
-//
-// See docs for more details
 #define HOLD_ON_OTHER_KEY_PRESS
 
 // On the other hand, CTRL/ESC will not ever be escape when held longer than
